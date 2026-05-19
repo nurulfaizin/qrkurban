@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Scan QR</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
+            background-color: #f0f4f8;
+        }
+        /* Container untuk mematikan margin iframe */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        iframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbxcsfEQOTuPXeFoxyAi-mmGYFA2NMnsNhlf_INV-2gsoAMNRd-S96jnQnx775LImzRG/exec" 
+            allow="camera; microphone; autoplay; encrypted-media; fullscreen" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</body>
+</html>

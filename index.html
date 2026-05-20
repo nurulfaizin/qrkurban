@@ -9,21 +9,28 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: auto;
-            font-family: sans-serif;
-            background-color: #f0f4f8;
+            width: 100%;
+            /* Mengizinkan scrolling penuh secara halus di perangkat mobile */
+            overflow: auto; 
+            -webkit-overflow-scrolling: touch;
+            background-color: #f4f7f6;
         }
-        /* Container untuk mematikan margin iframe */
+        
         .container {
+            width: 100%;
+            /* Menggunakan min-height agar kontainer bisa memanjang jika konten dalam iframe sangat tinggi */
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
-            height: 100vh;
+            box-sizing: border-box;
         }
+        
         iframe {
-            flex-grow: 1;
-            border: none;
             width: 100%;
-            height: 100%;
+            /* Menggunakan flex-grow agar tinggi iframe otomatis mengisi sisa ruang yang tersedia tanpa terpotong */
+            flex-grow: 1; 
+            border: none;
+            display: block;
         }
     </style>
 </head>
@@ -32,9 +39,8 @@
     <div class="container">
         <iframe 
             src="https://script.google.com/macros/s/AKfycbwy3wlb-bBNwQCwDjpZg7emDIpfcBH9IgLBQXnmYwXBvAX_6XCFHcf5OGLsl8y8uWzE/exec" 
-            allow="camera; microphone; autoplay; encrypted-media; picture-in-picture; document-domain" 
-			allowfullscreen
-			style="width: 100%; height: 100vh; border: none;">
+            allow="camera; microphone; autoplay; encrypted-media; picture-in-picture" 
+            allowfullscreen>
         </iframe>
     </div>
 
